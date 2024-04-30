@@ -10,3 +10,8 @@ process.stdin.on('data', (data) => {
   process.stdout.write('This important software is now closing\n');
   process.exit();
 });
+
+process.stdin.on('error', (err) => {
+  console.error('Error reading input:', err);
+  process.exit(1);
+});
