@@ -1,4 +1,4 @@
-function displayMessage (txt) {
+const displayMessage = (txt) => {
   console.log(txt);
 }
 
