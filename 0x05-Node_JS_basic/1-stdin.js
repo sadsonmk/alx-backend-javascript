@@ -1,14 +1,12 @@
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+// display the message
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-readline.question('Welcome to Holberton School, what is your name? \n', (name) => {
+// read user input
+process.stdin.on('data', (data) => {
+  const name = data.toString().trim();
+
   console.log(`Your name is: ${name}`);
-  readline.close();
-});
 
-process.on('SIGINT', () => {
-  console.log('This important software is now closing');
+  process.stdout.write('This important software is now closing\n');
   process.exit(0);
 });
