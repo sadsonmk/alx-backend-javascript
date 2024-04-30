@@ -15,6 +15,7 @@ app.get('/students', (req, res) => {
     if (error) {
       throw error;
     }
+    res.send('This is the list of our students');
     res.write(data);
     return res.end();
   });
