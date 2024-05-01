@@ -3,7 +3,7 @@ import mocha from 'mocha';
 
 const expect = chai.expect;
 const { describe, it } = mocha;
-import calculateNumber  from './2-calcul_chai.js';
+const calculateNumber = require('./2-calcul_chai');
 
 describe('calculateNumber', function() {
   it('should execute sum when type is sum', function() {
