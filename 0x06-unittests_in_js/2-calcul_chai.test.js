@@ -1,10 +1,10 @@
-import chai from "chai";
+import chai from 'chai';
+import calculateNumber from './2-calcul_chai.js';
+import { describe, it } from 'mocha';
 const expect = chai.expect;
-//const { describe, it } = require('mocha');
-import calculateNumber  from './2-calcul_chai.js';
 
-describe('calculateNumber', function() {
-  it('should execute sum when type is sum', function() {
+describe('calculateNumber', function () {
+  it('should execute sum when type is sum', function () {
     expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6);
     expect(calculateNumber('SUM', 0.9, 4.2)).to.equal(5);
     expect(calculateNumber('SUM', -1.4, -4.5)).to.equal(-5);
@@ -13,7 +13,7 @@ describe('calculateNumber', function() {
     expect(calculateNumber('SUM', 6.8, 0.0)).to.equal(7);
   });
 
-  it('should execute subtract when type is subtract', function() {
+  it('should execute subtract when type is subtract', function () {
     expect(calculateNumber('SUBTRACT', 1.4, 4.5)).to.equal(-4);
     expect(calculateNumber('SUBTRACT', -1.4, 4.5)).to.equal(-6);
     expect(calculateNumber('SUBTRACT', 1.4, -4.5)).to.equal(5);
@@ -22,7 +22,7 @@ describe('calculateNumber', function() {
     expect(calculateNumber('SUBTRACT', 9, 4)).to.equal(5);
   });
 
-  it('should divide correctly when type is divide', function() {
+  it('should divide correctly when type is divide', function () {
     expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
     expect(calculateNumber('DIVIDE', 1.4, 0.0)).to.equal('Error');
     expect(calculateNumber('DIVIDE', 0, 4.5)).to.equal(0);
@@ -32,5 +32,4 @@ describe('calculateNumber', function() {
     expect(calculateNumber('DIVIDE', 100, 25)).to.equal(4);
     expect(calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error');
   });
-
 });

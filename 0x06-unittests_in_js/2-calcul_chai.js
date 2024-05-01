@@ -1,4 +1,4 @@
-export default function calculateNumber(type, a, b) {
+export default function calculateNumber (type, a, b) {
   const roundedA = Math.round(a);
   const roundedB = Math.round(b);
 
@@ -7,8 +7,7 @@ export default function calculateNumber(type, a, b) {
   } else if (type === 'SUBTRACT') {
     return roundedA - roundedB;
   } else if (type === 'DIVIDE') {
-    const result = (roundedB === 0) ? "Error" : roundedA / roundedB;
+    const result = (roundedB === 0) ? 'Error' : roundedA / roundedB;
     return result;
   }
 }
-//module.exports = calculateNumber;
