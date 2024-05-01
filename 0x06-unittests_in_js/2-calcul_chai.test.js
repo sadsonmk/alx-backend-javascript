@@ -1,6 +1,7 @@
-const expect = require('chai').expect;
-const { describe, it } = require('mocha');
-const calculateNumber = require('./2-calcul_chai');
+import chai from "chai";
+const expect = chai.expect;
+//const { describe, it } = require('mocha');
+import calculateNumber  from './2-calcul_chai.js';
 
 describe('calculateNumber', function() {
   it('should execute sum when type is sum', function() {

@@ -1,4 +1,4 @@
-const calculateNumber = (type, a, b) => {
+export default function calculateNumber(type, a, b) {
   const roundedA = Math.round(a);
   const roundedB = Math.round(b);
 
@@ -11,4 +11,4 @@ const calculateNumber = (type, a, b) => {
     return result;
   }
 }
-module.exports = calculateNumber;
+//module.exports = calculateNumber;

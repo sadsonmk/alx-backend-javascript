@@ -4,14 +4,14 @@
   "description": "Tests app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0"
+  },
   "type": "module",
-  "dependencies": {
-    "chai": "^5.1.0",
-    "mocha": "^10.4.0"
-  }
+  "dependencies": {}
 }
