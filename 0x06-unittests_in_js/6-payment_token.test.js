@@ -1,12 +1,12 @@
 const sinon = require('sinon');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const getPaymentTokenFromAPI = require('./6-payment_token');
 
 describe('getPaymentTokenFromAPI', () => {
   it('resolve a promise when success is true', (done) => {
     getPaymentTokenFromAPI(true)
       .then((data) => {
-        expect(data).to.deep.equal({data: 'Successful response from the API' });
+        expect(data).to.eql({data: 'Successful response from the API' });
         done();
       })
       .catch((err) => {
