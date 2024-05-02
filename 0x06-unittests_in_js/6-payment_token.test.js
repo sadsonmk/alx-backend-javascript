@@ -1,6 +1,9 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
+const mocha = require('mocha');
+
 const getPaymentTokenFromAPI = require('./6-payment_token');
+
 
 describe('getPaymentTokenFromAPI', () => {
   it('resolve a promise when success is true', (done) => {
