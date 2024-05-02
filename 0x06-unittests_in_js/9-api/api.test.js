@@ -35,8 +35,8 @@ describe('Cart Page', () => {
 
   it('Correct status code when :id is NOT a number (=> 404)?', (done) => {
     request('http://localhost:7865/cart/hello', (err, res, body) => {
-      chai.expect(res.statusCode).to.equla(404);
-      chai.expect(body).to.equal('Invalid cart ID');
+      chai.expect(res.statusCode).to.equal(404);
+      chai.expect(body).to.equal('Invalid cart ID\n');
       done();
     });
   });
