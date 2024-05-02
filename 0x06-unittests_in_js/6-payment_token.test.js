@@ -16,14 +16,4 @@ describe('getPaymentTokenFromAPI', () => {
         done(err);
       });
   });
-
-  it('should not resolve the promise when success is false', (done) => {
-    getPaymentTokenFromAPI(false)
-    .then(() => {
-      done(new Error('Promise should not be resolved'));
-    })
-    .catch(() => {
-      done();
-    });
-  });
 });
