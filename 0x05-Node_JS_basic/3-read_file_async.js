@@ -7,6 +7,7 @@ function countStudents (path) {
       const students = row.splice(1, row.length);
 
       console.log(`Number of students: ${students.length}`);
+
       const fields = {};
       students.forEach(student => {
         const [fname, , , field] = student.split(',');
